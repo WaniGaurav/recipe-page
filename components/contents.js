@@ -26,9 +26,19 @@ const instructions = [
     "Serve cheesecake with desired toppings. Cover and store leftover cheesecake in the refrigerator for up to 5 days."
 ];
 
-let createInstruction = () =>{
-    let a = document.getElementsByClassName("instructions")
+let createInstructionDiv = () =>{
+    let a = document.getElementById("instruct")
     console.log(a)
+    let innerDiv = document.createElement('div')
+    innerDiv.className="instructionDiv";
+    let list  = document.createElement("ol")
+    for (let index = 0; index < instructions.length; index++) {
+        let li = document.createElement("li")
+        li.innerHTML = instructions[index]
+        list.appendChild(li)
+    }
+    innerDiv.appendChild(list);
+    a.appendChild(innerDiv);
 }
 
-createInstruction();
+createInstructionDiv();
