@@ -1,4 +1,3 @@
-// document.body.onload = createInstruction();
 
 const crust = [
     "1 and 1/2 cups (150g) <strong>graham cracker crumbs</strong> (about 10 full sheet graham crackers)",
@@ -26,19 +25,48 @@ const instructions = [
     "Serve cheesecake with desired toppings. Cover and store leftover cheesecake in the refrigerator for up to 5 days."
 ];
 
-let createInstructionDiv = () =>{
+let createInstruction = () =>{
     let a = document.getElementById("instruct")
-    console.log(a)
-    let innerDiv = document.createElement('div')
-    innerDiv.className="instructionDiv";
+    // console.log(a)
+    // let innerDiv = document.createElement('div')
+    // innerDiv.className="instructionDiv";
     let list  = document.createElement("ol")
     for (let index = 0; index < instructions.length; index++) {
         let li = document.createElement("li")
         li.innerHTML = instructions[index]
         list.appendChild(li)
     }
-    innerDiv.appendChild(list);
-    a.appendChild(innerDiv);
+    // innerDiv.appendChild(list);
+    // a.appendChild(innerDiv);
+    a.appendChild(list);
+    console.log(a)
 }
 
-createInstructionDiv();
+createInstruction();
+
+const crackId = "cracker";
+const cheeid = "cheesecake";
+
+let checkboxDiv = (did , array , lid) => {
+    // console.log(did)
+    let b = document.getElementById(did)
+    let innerDiv = document.createElement('div')
+    innerDiv.className="ingredientsDiv";
+    for (let index = 0; index < array.length; index++) {
+        let chbox = document.createElement("input");
+        // console.log(lid.concat(`${index + 1}`));
+        chbox.id = lid.concat(`${index + 1}`);
+        chbox.type = "checkbox";
+        chbox.name = `checkbox${index + 1}`;
+        innerDiv.appendChild(chbox);
+        let label = document.createElement("label");
+        label.innerHTML = array[index];
+        label.htmlFor = lid.concat(`${index + 1}`);
+        innerDiv.appendChild(label);
+    }
+    b.appendChild(innerDiv)
+    // console.log(b)
+}
+
+checkboxDiv( crackId, crust ,"crust");
+checkboxDiv( cheeid, cheesecake, "chcake");
