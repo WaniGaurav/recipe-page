@@ -25,6 +25,30 @@ const instructions = [
     "Serve cheesecake with desired toppings. Cover and store leftover cheesecake in the refrigerator for up to 5 days."
 ];
 
+const cookTimeTable = [
+    {
+        iName:"dining.svg",
+        t1:"Yields",
+        t2:"12 servings"
+    },
+    {
+        iName:"schedule.svg",
+        t1:"Prep TIme",
+        t2:"45 minutes"
+    },
+    {
+        iName:"schedule.svg",
+        t1:"Cook Time",
+        t2:"1 hour"
+    },
+    {
+        iName:"schedule.svg",
+        t1:"Total Time",
+        t2:"7,75 hours"
+    }
+    // return iName, t1 , t2;
+];
+
 let createInstruction = () =>{
     let a = document.getElementById("instruct")
     // console.log(a)
@@ -39,7 +63,7 @@ let createInstruction = () =>{
     // innerDiv.appendChild(list);
     // a.appendChild(innerDiv);
     a.appendChild(list);
-    console.log(a)
+    // console.log(a)
 }
 
 createInstruction();
@@ -47,7 +71,7 @@ createInstruction();
 const crackId = "cracker";
 const cheeid = "cheesecake";
 
-let checkboxDiv = (did , array , lid) => {
+let checkboxDiv = (did , array) => {
     // console.log(did)
     let b = document.getElementById(did)
     let innerDiv = document.createElement('div')
@@ -55,18 +79,67 @@ let checkboxDiv = (did , array , lid) => {
     for (let index = 0; index < array.length; index++) {
         let chbox = document.createElement("input");
         // console.log(lid.concat(`${index + 1}`));
-        chbox.id = lid.concat(`${index + 1}`);
+        chbox.id = did.concat(`${index + 1}`);
         chbox.type = "checkbox";
         chbox.name = `checkbox${index + 1}`;
         innerDiv.appendChild(chbox);
         let label = document.createElement("label");
         label.innerHTML = array[index];
-        label.htmlFor = lid.concat(`${index + 1}`);
+        label.htmlFor = did.concat(`${index + 1}`);
         innerDiv.appendChild(label);
     }
     b.appendChild(innerDiv)
     // console.log(b)
 }
 
-checkboxDiv( crackId, crust ,"crust");
-checkboxDiv( cheeid, cheesecake, "chcake");
+checkboxDiv( crackId, crust );
+checkboxDiv( cheeid, cheesecake);
+
+
+let cookingTime = (iName) =>{
+    let index = 0
+    console.log(iName[index].iName);
+    let c = document.getElementById("timetable");
+
+    for (index = 0; index < iName.length; index++) {
+        
+        let mainDiv = document.createElement("div")
+        mainDiv.className = "mainDiv";
+    
+            let image = document.createElement("img");
+            image.className = "svgImages";
+            image.src = `./images/svg/${iName[index].iName}`;
+            if (iName[index].iName === "dining.svg") {
+                image.style.color = 'orange';
+                // break;
+            }
+            mainDiv.appendChild(image);
+        
+                let innerDiv1 = document.createElement("div")
+                innerDiv1.className = "innerDiv";
+            
+                    let p1 = document.createElement("p");
+                    p1.className = "txtHead"
+                    p1.innerHTML = iName[index].t1;
+                    innerDiv1.appendChild(p1);
+                
+                    let p2 = document.createElement("p");
+                    p2.className = "txtDesc"
+                    p2.innerHTML = iName[index].t2;
+                    if (iName[index].t2 === "12 servings") {
+                        p2.style.color == 'orange';
+                        // break;
+                    }
+
+                innerDiv1.appendChild(p2);
+        
+            mainDiv.appendChild(innerDiv1);
+    
+        c.appendChild(mainDiv);
+    }
+
+
+    console.log(c);
+}
+
+cookingTime(cookTimeTable);
