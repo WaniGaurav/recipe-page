@@ -96,23 +96,19 @@ checkboxDiv( crackId, crust );
 checkboxDiv( cheeid, cheesecake);
 
 
-let cookingTime = (iName) =>{
-    let index = 0
-    console.log(iName[index].iName);
+let cookingTime = (TimeDisplay) =>{
+    // console.log(iName[index].t2);
     let c = document.getElementById("timetable");
 
-    for (index = 0; index < iName.length; index++) {
+    for (let index = 0; index < TimeDisplay.length; index++) {
         
         let mainDiv = document.createElement("div")
         mainDiv.className = "mainDiv";
     
             let image = document.createElement("img");
             image.className = "svgImages";
-            image.src = `./images/svg/${iName[index].iName}`;
-            if (iName[index].iName === "dining.svg") {
-                image.style.color = 'orange';
-                // break;
-            }
+            image.src = `./images/svg/${TimeDisplay[index].iName}`;
+        
             mainDiv.appendChild(image);
         
                 let innerDiv1 = document.createElement("div")
@@ -120,15 +116,14 @@ let cookingTime = (iName) =>{
             
                     let p1 = document.createElement("p");
                     p1.className = "txtHead"
-                    p1.innerHTML = iName[index].t1;
+                    p1.innerHTML = TimeDisplay[index].t1;
                     innerDiv1.appendChild(p1);
                 
                     let p2 = document.createElement("p");
                     p2.className = "txtDesc"
-                    p2.innerHTML = iName[index].t2;
-                    if (iName[index].t2 === "12 servings") {
-                        p2.style.color == 'orange';
-                        // break;
+                    p2.innerHTML = TimeDisplay[index].t2;
+                    if (TimeDisplay[index].t2 === "12 servings") {
+                        p2.style.color = "orange";
                     }
 
                 innerDiv1.appendChild(p2);
@@ -137,9 +132,10 @@ let cookingTime = (iName) =>{
     
         c.appendChild(mainDiv);
     }
+    // setTimeout(() => {
+    //     console.log(c);
+    // }, 3000);
 
-
-    console.log(c);
 }
 
 cookingTime(cookTimeTable);
