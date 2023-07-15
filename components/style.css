@@ -3,38 +3,288 @@
     margin: 0;
 }
 
+:root{
+    --fs-heading: 3rem;
+    --fs-recon: 0.875rem;
+    --fs-ingrd-head:1.5rem;
+    --fs-crust:1.125rem;
+    --fs-cheesecake-ingrd: 1.125rem;
+    --fs-instruction-heading: 1.5rem;
+    --fs-source-url: 1rem;
+    --img-height: 27.75rem;    
+    --img-top: 13.688rem;    
+    --img-left: 14.625rem;   
+    --svgdot6-weight:0.813rem;
+    --svgdot6-height:0.5rem;
+    --svgdot6-top:8.188rem;
+    --svgdot6-left:14.75rem;
+}
+
 .container{
-    width: min(90% ,1000px);
-    margin-inline: auto;
+    width: min(90% ,969px);
+    margin: auto;
     /* display: flex;
     align-items: center;
     justify-self: center;
     flex-direction: column; */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     border: 2px solid saddlebrown;
 }
-.flexboxClass{
+/* .flexboxClass{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* min-height: 100vh; */
-}
+    min-height: 100vh;
+} */
 
+.heading{
+    font-family: Playfair Display;
+    font-size: var(--fs-heading);
+    font-weight: 700;
+    line-height: 64px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.dots6{
+    width: var(--svgdot6-weight);
+    height: var(--svgdot6-height);
+    top: var(--svgdot6-top);
+    left: var(--svgdot6-left);
+
+}
+.recipe-content{
+    width: 60%;
+    font-family: Montserrat;
+    font-size: var(--fs-recon);
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #4F4F4F;
+    /* border: 2px solid green; */
+
+}
 .cheesecake-image{
     /* width: 969px; */
     max-width: 100%;
-    height: 444p;
-    top: 219px;
-    left: 234px;
+    height: var(--img-height);
+    top: var(--img-top);
+    left: var(--img-left);
     border-radius: 12px;
 }
-.material-symbols-outlined {
-  color: orange;
-}                
 
+        /* ingrdients */
 
-@media only screen and (width < 875px){
-    .container{
-        display: flex;
-        flex-wrap: wrap;
-    }
-} 
+.ingrdients-heading{
+    font-family: Playfair Display;
+    font-size: var(--fs-ingrd-head);
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.crust{
+    font-family: Playfair Display;
+    font-size: var(--fs-crust);
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+    /* for both crust and cheesecake start*/
+.ingredientsDiv{
+    display: flex;
+    flex-direction: column;
+    width: 56%;
+}
+
+    /* for both crust and cheesecake end*/
+
+.ingredient-crack-cheese{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.cheesecake-ingredients{
+    font-family: Playfair Display;
+    font-size: var(--fs-cheesecake-ingrd);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #333333;
+
+}
+
+    /* instructions */
+
+.instructions{
+    list-style: inside;
+    display: flex;
+    flex-direction: column;
+    width: 56%;
+}
+
+.instructions-heading{
+    font-family: Playfair Display;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: #333333;
+}
+
+.instructionDiv{
+
+}
+
+.instructions-list{
+    /* font-family: Montserrat;
+font-size: 16px;
+font-weight: 700;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left; */
+font-family: Montserrat;
+font-size: 16px;
+font-weight: 700;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+color: #333333;
+
+}
+
+.source-url{
+    font-family: Montserrat;
+    font-size: var(--fs-source-url);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #BDBDBD;
+}
+
+.svgImages1{
+    width: 27.087646484375px;
+    height: 25.144638061523438px;
+    top: 4.4388427734375px;
+    left: 3.8819961547851562px;
+    
+}
+.svgImages2{
+    width: 28.3333740234375px;
+    height: 26.52313232421875px;
+    top: 850px;
+    left: 1027px;
+    
+}
+.svgImages3{
+    width: 28.33333396911621px;
+    height: 28.33333396911621px;
+    top: 2.83331298828125px;
+    left: 2.8333358764648438px;
+    
+}
+.svgImages4{
+    width: 28.33333396911621px;
+    height: 28.33333396911621px;
+    top: 2.83331298828125px;
+    left: 2.8333358764648438px;
+    
+}
+
+.txtHead1{
+    width: 38px;
+    height: 12px;
+    top: 768px;
+    left: 1069px;
+    
+}
+.txtHead2{
+    width: 58px;
+    height: 12px;
+    top: 844px;
+    left: 1069px;
+    
+}
+.txtHead3{
+    width: 61px;
+    height: 12px;
+    top: 919px;
+    left: 1069px;
+    
+}
+.txtHead4{
+    width: 63px;
+    height: 12px;
+    top: 995px;
+    left: 1066px;
+    
+}
+
+.txtDesc1{
+    width: 77px;
+    height: 17px;
+    top: 784px;
+    left: 1069px;
+    
+}
+.txtDesc2{
+    width: 80px;
+    height: 17px;
+    top: 860px;
+    left: 1069px;
+    
+}
+.txtDesc3{
+    width: 43px;
+    height: 17px;
+    top: 935px;
+    left: 1069px;
+    
+}
+.txtDesc4{
+    width: 72px;
+    height: 17px;
+    top: 1011px;
+    left: 1066px;
+    
+}
+.ftext{
+    /* font-family: Montserrat;
+font-size: 14px;
+font-weight: 700;
+line-height: 17px;
+letter-spacing: 0em;
+text-align: center; */
+
+font-family: Montserrat;
+font-size: 14px;
+font-weight: 500;
+line-height: 17px;
+letter-spacing: 0em;
+text-align: center;
+
+/* font-family: Montserrat;
+font-size: 14px;
+font-weight: 600;
+line-height: 17px;
+letter-spacing: 0em;
+text-align: center; */
+
+}
+

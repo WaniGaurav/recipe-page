@@ -12,7 +12,7 @@ const cheesecake = [
     "1 teaspoon <strong>pure vanilla extract</strong>",
     "2 teaspoons <strong>fresh lemon juice</strong> (optional, but recommended)",
     "3 large <strong>eggs</strong>, at room temperature",
-    "topping suggestions: <i>salted caramel, lemon curd, strawberry topping, chocolate ganache, red wine chocolate ganache, fresh fruit, whipped cream, or raspberry sauce</i> (recipe in notes) "
+    "topping suggestions: <i><strong>salted caramel, lemon curd, strawberry topping, chocolate ganache, red wine chocolate ganache, fresh fruit, whipped cream, or raspberry sauce</strong></i> (recipe in notes) "
 ];
 
 const instructions = [
@@ -57,6 +57,7 @@ let createInstruction = () =>{
     let list  = document.createElement("ol")
     for (let index = 0; index < instructions.length; index++) {
         let li = document.createElement("li")
+        li.className = "instructions-list";
         li.innerHTML = instructions[index]
         list.appendChild(li)
     }
@@ -84,6 +85,7 @@ let checkboxDiv = (did , array) => {
         chbox.name = `checkbox${index + 1}`;
         innerDiv.appendChild(chbox);
         let label = document.createElement("label");
+        label.className = "ingredient-crack-cheese";
         label.innerHTML = array[index];
         label.htmlFor = did.concat(`${index + 1}`);
         innerDiv.appendChild(label);
@@ -106,7 +108,7 @@ let cookingTime = (TimeDisplay) =>{
         mainDiv.className = "mainDiv";
     
             let image = document.createElement("img");
-            image.className = "svgImages";
+            image.className = `svgImages${index+1}`;
             image.src = `./images/svg/${TimeDisplay[index].iName}`;
         
             mainDiv.appendChild(image);
@@ -115,12 +117,12 @@ let cookingTime = (TimeDisplay) =>{
                 innerDiv1.className = "innerDiv";
             
                     let p1 = document.createElement("p");
-                    p1.className = "txtHead"
+                    p1.className = `txtHead${index+1}`;
                     p1.innerHTML = TimeDisplay[index].t1;
                     innerDiv1.appendChild(p1);
                 
                     let p2 = document.createElement("p");
-                    p2.className = "txtDesc"
+                    p2.className = `txtDesc${index+1}`;
                     p2.innerHTML = TimeDisplay[index].t2;
                     if (TimeDisplay[index].t2 === "12 servings") {
                         p2.style.color = "orange";
@@ -132,10 +134,7 @@ let cookingTime = (TimeDisplay) =>{
     
         c.appendChild(mainDiv);
     }
-    // setTimeout(() => {
-    //     console.log(c);
-    // }, 3000);
-
+    
 }
 
 cookingTime(cookTimeTable);
