@@ -1,18 +1,18 @@
 
 const crust = [
-    "1 and 1/2 cups (150g) <strong>graham cracker crumbs</strong> (about 10 full sheet graham crackers)",
-    "5 Tablespoons (70g) <strong>unsalted butter</strong>, melted",
-    "1/4 cup (50g) <strong>granulated sugar</strong>"
+    "1 and 1/2 cups (150g) <strong>graham cracker crumbs</strong> (about 10 full sheet graham crackers)<br>",
+    "5 Tablespoons (70g) <strong>unsalted butter</strong>, melted<br>",
+    "1/4 cup (50g) <strong>granulated sugar</strong><br>"
 ];
 
 const cheesecake = [
-    "four 8-ounce blocks (904g) full-fat <strong>cream cheese</strong>, softened to room temperature",
-    "1 cup (200g) <strong>granulated sugar</strong>",
-    "1 cup (240g) full-fat <strong>sour cream</strong>, at room temperature",
-    "1 teaspoon <strong>pure vanilla extract</strong>",
-    "2 teaspoons <strong>fresh lemon juice</strong> (optional, but recommended)",
-    "3 large <strong>eggs</strong>, at room temperature",
-    "topping suggestions: <i><strong>salted caramel, lemon curd, strawberry topping, chocolate ganache, red wine chocolate ganache, fresh fruit, whipped cream, or raspberry sauce</strong></i> (recipe in notes) "
+    "four 8-ounce blocks (904g) full-fat <strong>cream cheese</strong>, softened to room temperature<br>",
+    "1 cup (200g) <strong>granulated sugar</strong><br>",
+    "1 cup (240g) full-fat <strong>sour cream</strong>, at room temperature<br>",
+    "1 teaspoon <strong>pure vanilla extract</strong><br>",
+    "2 teaspoons <strong>fresh lemon juice</strong> (optional, but recommended)<br>",
+    "3 large <strong>eggs</strong>, at room temperature<br>",
+    "topping suggestions: <i><strong>salted caramel, lemon curd, strawberry topping, chocolate ganache, red wine chocolate ganache, fresh fruit, whipped cream, or raspberry sauce</strong></i> (recipe in notes) <br>"
 ];
 
 const instructions = [
@@ -78,12 +78,14 @@ let checkboxDiv = (did , array) => {
     let innerDiv = document.createElement('div')
     innerDiv.className="ingredientsDiv";
     for (let index = 0; index < array.length; index++) {
+        
         let chbox = document.createElement("input");
         // console.log(lid.concat(`${index + 1}`));
         chbox.id = did.concat(`${index + 1}`);
         chbox.type = "checkbox";
         chbox.name = `checkbox${index + 1}`;
         innerDiv.appendChild(chbox);
+        
         let label = document.createElement("label");
         label.className = "ingredient-crack-cheese";
         label.innerHTML = array[index];
@@ -117,12 +119,14 @@ let cookingTime = (TimeDisplay) =>{
                 innerDiv1.className = "innerDiv";
             
                     let p1 = document.createElement("p");
-                    p1.className = `txtHead${index+1}`;
+                    p1.className = "txtHead";
+                    // p1.className = `txtHead${index+1}`;
                     p1.innerHTML = TimeDisplay[index].t1;
                     innerDiv1.appendChild(p1);
                 
                     let p2 = document.createElement("p");
-                    p2.className = `txtDesc${index+1}`;
+                    p2.className = "txtDesc";
+                    // p2.className = `txtDesc${index+1}`;
                     p2.innerHTML = TimeDisplay[index].t2;
                     if (TimeDisplay[index].t2 === "12 servings") {
                         p2.style.color = "orange";

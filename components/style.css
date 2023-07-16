@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -74,7 +76,32 @@
     border-radius: 12px;
 }
 
+.time{
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-rows: repeat(3 , 1fr);
+    width: fit-content;
+    justify-self: right;
+    border: 2px solid green;
+}
+
+.mainDiv{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-self: right;
+}
+.innerDiv{
+    grid: 1 span / 2;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+}
         /* ingrdients */
+
+.ingredients{
+    display: flex;
+    flex-direction: column;
+}
 
 .ingrdients-heading{
     font-family: Playfair Display;
@@ -95,9 +122,7 @@
 
     /* for both crust and cheesecake start*/
 .ingredientsDiv{
-    display: flex;
-    flex-direction: column;
-    width: 56%;
+    display: inline-block;
 }
 
     /* for both crust and cheesecake end*/
@@ -110,7 +135,6 @@
     line-height: 25px;
     letter-spacing: 0em;
     text-align: left;
-
 }
 
 .cheesecake-ingredients{
@@ -146,7 +170,7 @@
 }
 
 .instructionDiv{
-
+background-color: aqua;
 }
 
 .instructions-list{
@@ -207,21 +231,21 @@ color: #333333;
     
 }
 
-.txtHead1{
+/* .txtHead1{
     width: 38px;
     height: 12px;
     top: 768px;
     left: 1069px;
     
-}
-.txtHead2{
-    width: 58px;
+} */
+.txtHead{
+    width: 75px;
     height: 12px;
     top: 844px;
     left: 1069px;
     
 }
-.txtHead3{
+/* .txtHead3{
     width: 61px;
     height: 12px;
     top: 919px;
@@ -242,15 +266,15 @@ color: #333333;
     top: 784px;
     left: 1069px;
     
-}
-.txtDesc2{
+} */
+.txtDesc{
     width: 80px;
     height: 17px;
     top: 860px;
     left: 1069px;
     
 }
-.txtDesc3{
+/* .txtDesc3{
     width: 43px;
     height: 17px;
     top: 935px;
@@ -263,7 +287,7 @@ color: #333333;
     top: 1011px;
     left: 1066px;
     
-}
+} */
 .ftext{
     /* font-family: Montserrat;
 font-size: 14px;
