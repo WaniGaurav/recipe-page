@@ -23,23 +23,31 @@
 }
 
 .container{
-    width: min(90% ,969px);
+    width: min(100% ,1000px);
+    /* height: 2989px; */
+    /* height:min(100% ,2989px); */
+    padding: 3rem 1rem;
     margin: auto;
-    /* display: flex;
-    align-items: center;
-    justify-self: center;
-    flex-direction: column; */
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    display: flex;
+    /* align-items: center; */
+    /* justify-self: center; */
+    flex-direction: column;
+    /* display: grid;
+    grid-template-rows: auto 1fr auto; */
     border: 2px solid saddlebrown;
 }
-/* .flexboxClass{
+.flexboxClass{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-} */
+    /* min-height: 100vh; */
+}
 
+.recipe{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
 .heading{
     font-family: Playfair Display;
     font-size: var(--fs-heading);
@@ -48,7 +56,12 @@
     letter-spacing: 0em;
     text-align: left;
 }
+.content-svg{
+    display: flex;
+    padding-top: 1rem;
+}
 .dots6{
+    margin-top: 4px;
     width: var(--svgdot6-weight);
     height: var(--svgdot6-height);
     top: var(--svgdot6-top);
@@ -56,7 +69,8 @@
 
 }
 .recipe-content{
-    width: 60%;
+    margin-left: 8px;
+    width: 87%;
     font-family: Montserrat;
     font-size: var(--fs-recon);
     font-weight: 500;
@@ -69,29 +83,69 @@
 }
 .cheesecake-image{
     /* width: 969px; */
-    max-width: 100%;
+    /* max-width: (100%); */
+    padding: 3rem 0;
+    width: min(100% ,969px);
     height: var(--img-height);
     top: var(--img-top);
     left: var(--img-left);
     border-radius: 12px;
 }
 
+/* section */
+
+.section{
+    display: flex;
+}
+
+input{
+    margin: 12px 0;
+}
+
+strong{
+    font-weight: 700;
+}
+
+i strong{
+    font-weight: 500;
+}
+
+.left{
+    width: 60%;
+}
+
+.right{
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    max-height: fit-content;
+    width: 40%;
+}
+
 .time{
-    display: grid;
+    /* display: grid; */
     /* grid-template-columns: repeat(2, 1fr); */
-    grid-template-rows: repeat(3 , 1fr);
-    width: fit-content;
-    justify-self: right;
-    border: 2px solid green;
+    /* grid-template-rows: repeat(4 , 1fr); */
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 367px;
+    width: 216px;
+    /* justify-self: right; */
+    /* border: 2px solid green; */
 }
 
 .mainDiv{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    display: flex;
     justify-self: right;
+    height: 35px;
 }
 .innerDiv{
-    grid: 1 span / 2;
+    flex: 2;
     /* display: flex;
     flex-direction: column;
     justify-content: space-between; */
@@ -104,6 +158,7 @@
 }
 
 .ingrdients-heading{
+    padding-bottom: 2rem;
     font-family: Playfair Display;
     font-size: var(--fs-ingrd-head);
     font-weight: 700;
@@ -122,15 +177,16 @@
 
     /* for both crust and cheesecake start*/
 .ingredientsDiv{
+    padding: 1rem 0;
     display: inline-block;
 }
 
     /* for both crust and cheesecake end*/
 
 .ingredient-crack-cheese{
+    padding-bottom: 1rem;
     font-family: Montserrat;
     font-size: 16px;
-    font-weight: 700;
     font-weight: 400;
     line-height: 25px;
     letter-spacing: 0em;
@@ -155,7 +211,7 @@
     list-style: inside;
     display: flex;
     flex-direction: column;
-    width: 56%;
+    /* width: 56%; */
 }
 
 .instructions-heading{
@@ -231,84 +287,39 @@ color: #333333;
     
 }
 
-/* .txtHead1{
-    width: 38px;
-    height: 12px;
-    top: 768px;
-    left: 1069px;
-    
-} */
 .txtHead{
+    font-family: Montserrat;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #BDBDBD;
     width: 75px;
-    height: 12px;
-    top: 844px;
-    left: 1069px;
-    
-}
-/* .txtHead3{
-    width: 61px;
-    height: 12px;
-    top: 919px;
-    left: 1069px;
-    
-}
-.txtHead4{
-    width: 63px;
-    height: 12px;
-    top: 995px;
-    left: 1066px;
+    height: 15px;
     
 }
 
-.txtDesc1{
-    width: 77px;
-    height: 17px;
-    top: 784px;
-    left: 1069px;
-    
-} */
 .txtDesc{
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
     width: 80px;
     height: 17px;
-    top: 860px;
-    left: 1069px;
     
 }
-/* .txtDesc3{
-    width: 43px;
-    height: 17px;
-    top: 935px;
-    left: 1069px;
-    
-}
-.txtDesc4{
-    width: 72px;
-    height: 17px;
-    top: 1011px;
-    left: 1066px;
-    
-} */
+
 .ftext{
-    /* font-family: Montserrat;
-font-size: 14px;
-font-weight: 700;
-line-height: 17px;
-letter-spacing: 0em;
-text-align: center; */
-
-font-family: Montserrat;
-font-size: 14px;
-font-weight: 500;
-line-height: 17px;
-letter-spacing: 0em;
-text-align: center;
-
-/* font-family: Montserrat;
-font-size: 14px;
-font-weight: 600;
-line-height: 17px;
-letter-spacing: 0em;
-text-align: center; */
+    color: #BDBDBD;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
 
 }
 
