@@ -94,12 +94,30 @@
 
 /* section */
 
+/* .divDemo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: max-content;
+} */
+
 .section{
     display: flex;
 }
 
+/* .innerPtag label{
+    border: 2px solid slateblue;
+    display: inline;
+    padding-left: 10px;
+    display: inline-block; 
+} */
+
 input{
-    margin: 12px 0;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+label{
+    border: 2px solid darkmagenta;
 }
 
 strong{
@@ -112,6 +130,7 @@ i strong{
 
 .left{
     width: 60%;
+    border: 2px solid slateblue;
 }
 
 .right{
@@ -177,8 +196,10 @@ i strong{
 
     /* for both crust and cheesecake start*/
 .ingredientsDiv{
+    /* display: grid;
+    grid-template-columns: repeat(1 , 1fr);
+    grid-template-rows: 1fr; */
     padding: 1rem 0;
-    display: inline-block;
 }
 
     /* for both crust and cheesecake end*/
@@ -196,7 +217,6 @@ i strong{
 .cheesecake-ingredients{
     font-family: Playfair Display;
     font-size: var(--fs-cheesecake-ingrd);
-    font-style: italic;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0em;

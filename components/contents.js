@@ -79,20 +79,35 @@ let checkboxDiv = (did , array) => {
     innerDiv.className="ingredientsDiv";
     for (let index = 0; index < array.length; index++) {
         
+        let label = document.createElement("label");
+        label.className = "ingredient-crack-cheese";
+        label.htmlFor = did.concat(`${index + 1}`);
+        label.innerHTML = array[index];
+        
+
+        
+        
+        // input tag
         let chbox = document.createElement("input");
         // console.log(lid.concat(`${index + 1}`));
         chbox.id = did.concat(`${index + 1}`);
         chbox.type = "checkbox";
         chbox.name = `checkbox${index + 1}`;
+       
+        // input tag end
+        
+        
         innerDiv.appendChild(chbox);
         
-        let label = document.createElement("label");
-        label.className = "ingredient-crack-cheese";
-        label.innerHTML = array[index];
-        label.htmlFor = did.concat(`${index + 1}`);
         innerDiv.appendChild(label);
+        
+        // innerPtag.appendChild(label);
+        // innerPtag.appendChild(chbox);
+        // innerDiv.appendChild(innerPtag);
+        // b.appendChild(label)
+        b.appendChild(innerDiv)
     }
-    b.appendChild(innerDiv)
+    // b.appendChild(innerPtag)
     // console.log(b)
 }
 
