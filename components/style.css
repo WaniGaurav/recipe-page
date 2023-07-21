@@ -26,7 +26,7 @@
     width: min(100% ,1000px);
     /* height: 2989px; */
     /* height:min(100% ,2989px); */
-    padding: 3rem 1rem;
+    padding: 1.6rem 1rem;
     margin: auto;
     display: flex;
     /* align-items: center; */
@@ -111,14 +111,36 @@
     display: inline-block; 
 } */
 
-input{
-    margin-top: 1rem;
-    margin-right: 1rem;
+.innerDivCheckbox{
+    display: flex;
+    /* padding-top: 1rem */
+    /* align-items: baseline; */
 }
 
-label{
-    border: 2px solid darkmagenta;
+input[type="checkbox"] {
+    /* display: block; */
+    /* margin-top: 1rem; */
+    margin-right: 1rem;
+    /* margin-right: 1rem;
+    vertical-align: text-top; */
+    width: 21px;
+    height: 21px;
+    /* top: 1172px;
+    left: 237px; */
+    border-radius: 4px;
+    border: 1px;
+
+    border: 1px solid #828282
 }
+
+/* label{
+    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    border: 2px solid darkmagenta;
+} */
 
 strong{
     font-weight: 700;
@@ -129,16 +151,18 @@ i strong{
 }
 
 .left{
-    width: 60%;
-    border: 2px solid slateblue;
+    /* display: flex;
+    flex-direction: column; */
+    width: 70%;
+    /* border: 2px solid slateblue; */
 }
 
 .right{
     display: flex;
     align-items: baseline;
-    justify-content: flex-end;
+    justify-content: flex-start;
     max-height: fit-content;
-    width: 40%;
+    width: 30%;
 }
 
 .time{
@@ -148,12 +172,12 @@ i strong{
     /* height: 100%; */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: end;
     justify-content: space-evenly;
     height: 367px;
     width: 216px;
     /* justify-self: right; */
-    /* border: 2px solid green; */
+    border: 2px solid green;
 }
 
 .mainDiv{
@@ -165,9 +189,9 @@ i strong{
 }
 .innerDiv{
     flex: 2;
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: space-between; */
+    justify-content: space-between;
 }
         /* ingrdients */
 
@@ -186,6 +210,8 @@ i strong{
     text-align: left;
 }
 .crust{
+    /* padding-top: 0.8rem; */
+    padding-bottom: 2rem;
     font-family: Playfair Display;
     font-size: var(--fs-crust);
     font-weight: 400;
@@ -193,14 +219,17 @@ i strong{
     letter-spacing: 0em;
     text-align: left;
 }
+/* .crust i{
+    padding: 2rem 0;
+} */
 
     /* for both crust and cheesecake start*/
-.ingredientsDiv{
-    /* display: grid;
+/*.ingredientsDiv{
+     display: grid;
     grid-template-columns: repeat(1 , 1fr);
-    grid-template-rows: 1fr; */
+    grid-template-rows: 1fr; 
     padding: 1rem 0;
-}
+}*/
 
     /* for both crust and cheesecake end*/
 
@@ -215,6 +244,8 @@ i strong{
 }
 
 .cheesecake-ingredients{
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
     font-family: Playfair Display;
     font-size: var(--fs-cheesecake-ingrd);
     font-weight: 400;
@@ -235,6 +266,8 @@ i strong{
 }
 
 .instructions-heading{
+    padding-top: 1rem;
+    padding-bottom: 2rem;
     font-family: Playfair Display;
     font-size: 24px;
     font-weight: 700;
@@ -268,6 +301,7 @@ color: #333333;
 }
 
 .source-url{
+    padding: 2rem 0;
     font-family: Montserrat;
     font-size: var(--fs-source-url);
     font-style: italic;
@@ -330,6 +364,18 @@ color: #333333;
     width: 80px;
     height: 17px;
     
+}
+
+.footer{
+    /* display: flex;
+    align-items: flex-end;
+    height: min(30% , 50px);
+    justify-content: center; */
+    height: 70px;
+    display: grid;
+    grid-template-rows: 1fr;
+    align-items: end;
+    /* border: 2px solid orangered; */
 }
 
 .ftext{
