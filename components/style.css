@@ -258,6 +258,34 @@ i strong{
 
     /* instructions */
 
+ol li {
+    list-style-type: none;
+    counter-increment: item;
+  }
+  
+  ol li:before {
+    content: counter(item);
+    margin-right: 5px;
+    font-size: 80%;
+    width: 36px;
+    height: 36px;
+    background-color: #F2994A;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 6px;
+  }
+
+
+/* ol li{
+    width: 36px;
+    height: 36px;
+    top: 1442px;
+    left: 236px;
+    border-radius: 6px;
+    color: #F2994A;
+} */
+
 .instructions{
     list-style: inside;
     display: flex;
