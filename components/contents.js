@@ -16,7 +16,7 @@ const cheesecake = [
 ];
 
 const instructions = [
-    "Adjust the oven rack to the lower-middle position and preheat<br> oven to 350°F (177°C).",
+    "           Adjust the oven rack to the lower-middle position and preheat<br> oven to 350°F (177°C).",
     "<strong>Make the crust:</strong> Using a food processor, pulse the graham<br> crackers into crumbs. Pour into a medium bowl and stir in sugar<br> and melted butter until combined. (You can also pulse it all<br> together in the food processor.) Mixture will be sandy. Press firmly<br> into the bottom and slightly up the sides of a 9-inch or 10-inch<br> springform pan. No need to grease the pan first. I use the bottom<br> of a measuring cup to pack the crust down tightly. Pre-bake for 8<br> minutes. Remove from the oven and place the hot pan on a large<br> piece of aluminum foil. The foil will wrap around the pan for the<br> water bath in step 4. Allow crust to slightly cool as you prepare<br> the filling.",
     "<strong>Make the filling:</strong> Using a handheld or stand mixer fitted with a<br> paddle attachment, beat the cream cheese and granulated sugar<br> together on medium-high speed in a large bowl until the mixture<br> is smooth and creamy, about 2 minutes. Add the sour cream,<br> vanilla extract, and lemon juice then beat until fully combined. On<br> medium speed, add the eggs one at a time, beating after each<br> addition until just blended. After the final egg is incorporated into<br> the batter, stop mixing. To help prevent the cheesecake from<br> deflating and cracking as it cools, avoid over-mixing the batter as<br> best you can.",
     "<strong>Prepare the simple water bath (see note)</strong> Boil a pot of water.<br> You need 1 inch of water in your roasting pan for the water bath,<br> so make sure you boil enough. I use an entire kettle of hot water.<br> As the water is heating up, wrap the aluminum foil around<br> the springform pan. Pour the cheesecake batter on top of the crust.<br> Use a rubber spatula or spoon to smooth it into an even layer.<br> Place the pan inside of a large roasting pan. Carefully pour the<br> hot water inside of the pan and place in the oven. (Or you can<br> place the roasting pan in the oven first, then pour the hot water<br> in. Whichever is easier for you.)",
@@ -54,7 +54,7 @@ let createInstruction = () =>{
     // console.log(a)
     // let innerDiv = document.createElement('div')
     // innerDiv.className="instructionDiv";
-    let list  = document.createElement("ol")
+    let list  = document.createElement("ul")
     for (let index = 0; index < instructions.length; index++) {
         let li = document.createElement("li")
         li.className = "instructions-list";
