@@ -275,47 +275,47 @@ i strong{
     flex-direction:column;
 } */
 
-ul {
-    display: flex;
-    flex-direction:column;
-    list-style-type: decimal;
-    margin-block-start: 0px;
-    margin-block-end: 0px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 0px;
+a {
+    text-decoration: none;
+    color: #BDBDBD
 }
 
-ul li {
-    /* display: block; */
-    list-style-type: none;
-    /* list-style-position: outside; */
-    
-    counter-increment: item;
-  }
-  
-   li::marker {
-    content: counter(item);
-    margin-right: 5px;
-    font-size: 80%;
-    width: 36px;
-    height: 36px;
-    background-color: #F2994A;
-    color: #FFFFFF;
-    font-weight: bold;
-    padding: 3px 8px;
-    border-radius: 6px;
-  }
+.listClass {
+    /* counter-reset: list-number; */
+    /* list-style-type: none; */
+    list-style-position: outside;
+    /* display: table; */
+    padding-left: 2rem;
+}
 
+.listClass li{
+    /* counter-increment: list-number; */
+    /* display: table-row; */
+    border: 2px solid royalblue;
+}
 
-/* ol li{
-    width: 36px;
-    height: 36px;
-    top: 1442px;
-    left: 236px;
-    border-radius: 6px;
-    color: #F2994A;
-} */
+.listClass li::marker {
+    /* counter-increment: list-number; */
+    /* display: table-cell; */
+    /* content: counter(list-number); */
+    margin-right: 10px;
+    /* margin-bottom:10px; */
+    width:36px;
+    height:36px;
+    display:inline-flex;
+    /* align-items:center; */
+    justify-content: center;
+    font-family: Playfair Display;
+    font-size: 24px;
+    font-weight: 700;
+    /* line-height: 32px; */
+    letter-spacing: 0em;
+    text-align: left;
+    background-color:#F2994A;
+    border-radius:6px;
+    /* color:#fff; */
+    color:#333333;
+  }
 
 .instructions{
     list-style: inside;
@@ -341,7 +341,7 @@ ul li {
     display: flex;
     flex-direction:column;
     flex-wrap: wrap;
-background-color: aqua;
+/* background-color: aqua; */
 }
 
 .instructions-list{
@@ -354,6 +354,7 @@ text-align: left; */
 /* display: flex; */
 /* flex-direction:column; */
 /* flex-wrap: wrap; */
+/* display: inline-flex; */
 font-family: Montserrat;
 font-size: 16px;
 font-weight: 700;
@@ -362,7 +363,6 @@ line-height: 24px;
 letter-spacing: 0em;
 text-align: left;
 color: #333333;
-border: 2px solid royalblue;
 }
 
 .source-url{

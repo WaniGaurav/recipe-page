@@ -51,18 +51,26 @@ const cookTimeTable = [
 
 let createInstruction = () =>{
     let a = document.getElementById("instruct")
-    // console.log(a)
-    // let innerDiv = document.createElement('div')
-    // innerDiv.className="instructionDiv";
-    let list  = document.createElement("ul")
+    
+    let list  = document.createElement("ol")
+    list.className ="listClass";
     for (let index = 0; index < instructions.length; index++) {
         let li = document.createElement("li")
         li.className = "instructions-list";
         li.innerHTML = instructions[index]
         list.appendChild(li)
     }
-    // innerDiv.appendChild(list);
-    // a.appendChild(innerDiv);
+
+
+    // let list  = document.createElement("div")
+    // list.className ="listClass";
+    // for (let index = 0; index < instructions.length; index++) {
+    //     let li = document.createElement("div")
+    //     li.className = "instructions-list";
+    //     li.innerHTML = instructions[index]
+    //     list.appendChild(li)
+    // }
+
     a.appendChild(list);
     // console.log(a)
 }
