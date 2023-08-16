@@ -56,8 +56,14 @@ let createInstruction = () =>{
     list.className ="listClass";
     for (let index = 0; index < instructions.length; index++) {
         let li = document.createElement("li")
-        li.className = "instructions-list";
-        li.innerHTML = instructions[index]
+        // li.className = "instructions-list";
+        
+        let spanTag = document.createElement("span")
+        spanTag.className = "instructions-list";
+        spanTag.innerHTML = instructions[index]
+        
+        // li.innerHTML = instructions[index]
+        li.appendChild(spanTag)
         list.appendChild(li)
     }
 
@@ -139,7 +145,8 @@ let cookingTime = (TimeDisplay) =>{
         mainDiv.className = "mainDiv";
     
             let image = document.createElement("img");
-            image.className = `svgImages${index+1}`;
+            // image.className = `svgImages${index+1}`;
+            image.className = "svgImages";
             image.src = `./images/svg/${TimeDisplay[index].iName}`;
         
             mainDiv.appendChild(image);
