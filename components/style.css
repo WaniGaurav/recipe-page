@@ -454,3 +454,29 @@ color: #000000;
 
 }
 
+            /* mobile */
+
+
+@media only screen and (max-width:1000px) {
+    .right{
+        padding-bottom: 2rem;
+    }
+    .section{
+        flex-direction: column-reverse;
+    }
+    .time{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: max-content;
+        width: 350px;
+    }
+    .mainDiv1{
+        grid-column:  1 / span last;
+        /* background-color: aqua; */
+        padding-bottom: 1rem;
+    }
+    .mainDiv1,.mainDiv2,.mainDiv3,.mainDiv4{
+        display: flex;
+    }
+}
