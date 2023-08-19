@@ -19,7 +19,7 @@
     --fs-ingredient-crack-cheese:1rem;
 }
 
-@media (width < 1000px){  
+@media (width < 750px){  
     :root{
         --fs-heading: 1.5rem;
         --fs-recon: 0.75rem;
@@ -27,7 +27,7 @@
         --fs-crust:1rem;
         --fs-cheesecake-ingrd: 1.125rem;
         --fs-instruction-heading: 1.5rem;
-        --fs-source-url: 12rem;
+        --fs-source-url: 0.75rem;
         --img-height: 12.625rem;
         --svgdot6-width:0.813rem;
         --svgdot6-height:0.5rem;
@@ -50,8 +50,8 @@ p {
     margin: auto;
     display: flex;
     /* align-items: center; */
-    /* justify-self: center; */
     flex-direction: column;
+    /* justify-content: center; */
     /* display: grid;
     grid-template-rows: auto 1fr auto; */
     border: 2px solid saddlebrown;
@@ -457,9 +457,15 @@ color: #000000;
             /* mobile */
 
 
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width:700px) {
+    .container{
+        max-width: 375px;
+    }
     .right{
         padding-bottom: 2rem;
+    }
+    .left{
+        width: fit-content;
     }
     .section{
         flex-direction: column-reverse;
@@ -472,11 +478,23 @@ color: #000000;
         width: 350px;
     }
     .mainDiv1{
-        grid-column:  1 / span last;
+        grid-column:  1 / span 4;
         /* background-color: aqua; */
         padding-bottom: 1rem;
     }
-    .mainDiv1,.mainDiv2,.mainDiv3,.mainDiv4{
-        display: flex;
+    .cheesecake-image{
+        width: min(100% ,352px);
     }
+    .ingredientsDiv label{
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+        padding: 0px 26px 0px 0px;
+      }
+    /* .ingredientsDiv input{
+        margin: 0px 0px 0px 0px;
+      } */
+    /* .mainDiv1,.mainDiv2,.mainDiv3,.mainDiv4{
+        display: flex;
+    } */
 }

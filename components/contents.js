@@ -143,9 +143,10 @@ let cookingTime = (TimeDisplay) =>{
         
         let mainDiv = document.createElement("div")
         // mainDiv.className = "mainDiv";
-        // mainDiv.className = `mainDiv${index+1}`;
+        mainDiv.className = `mainDiv${index+1}`;
         // let secondClass = `mainDiv${index+1}`;
-        mainDiv.classList.add = ("mainDiv", "mainDivFlex");
+        // mainDiv.classList.add = ("mainDiv");
+        setTimeout(() => { mainDiv.classList.add("mainDiv") }, 500);
     
             let image = document.createElement("img");
             // image.className = `svgImages${index+1}`;
