@@ -46,7 +46,6 @@ const cookTimeTable = [
         t1:"Total Time",
         t2:"7,75 hours"
     }
-    // return iName, t1 , t2;
 ];
 
 let createInstruction = () =>{
@@ -56,105 +55,71 @@ let createInstruction = () =>{
     list.className ="listClass";
     for (let index = 0; index < instructions.length; index++) {
         let li = document.createElement("li")
-        // li.className = "instructions-list";
         
         let spanTag = document.createElement("span")
         spanTag.className = "instructions-list";
         spanTag.innerHTML = instructions[index]
         
-        // li.innerHTML = instructions[index]
         li.appendChild(spanTag)
         list.appendChild(li)
     }
 
-
-    // let list  = document.createElement("div")
-    // list.className ="listClass";
-    // for (let index = 0; index < instructions.length; index++) {
-    //     let li = document.createElement("div")
-    //     li.className = "instructions-list";
-    //     li.innerHTML = instructions[index]
-    //     list.appendChild(li)
-    // }
-
     a.appendChild(list);
-    // console.log(a)
 }
 
 createInstruction();
 
 const crackId = "cracker";
-const cheeid = "cheesecake";
+const cheeId = "cheesecake";
 
 let checkboxDiv = (did , array) => {
-    // console.log(did)
+
     let b = document.getElementById(did)
-    // let innerDiv = document.createElement('div')
-    // innerDiv.className="ingredientsDiv";
+    
     for (let index = 0; index < array.length; index++) {
         
         let innerDiv1 = document.createElement('div')
         innerDiv1.className="innerDivCheckbox";
         
         let label = document.createElement("label");
-        
-
-        // label.className = "ingredient-crack-cheese";
         label.htmlFor = did.concat(`${index + 1}`);
-        // label.innerHTML = array[index];
         
         let spantag = document.createElement("span")
         spantag.className = "ingredient-crack-cheese";
         spantag.innerHTML = array[index];
-        
         label.appendChild(spantag);
         
         // input tag
         let chbox = document.createElement("input");
-        // console.log(lid.concat(`${index + 1}`));
         chbox.id = did.concat(`${index + 1}`);
         chbox.type = "checkbox";
         chbox.name = `checkbox${index + 1}`;
-        
         // input tag end
-        
         
         innerDiv1.appendChild(chbox);
         
         innerDiv1.appendChild(label);
         
-        // innerDiv.appendChild(innerDiv1);
-        
         b.appendChild(innerDiv1)
         
-        // innerPtag.appendChild(label);
-        // innerPtag.appendChild(chbox);
-        // innerDiv.appendChild(innerPtag);
-        // b.appendChild(label)
     }
-    // b.appendChild(innerDiv)
-    // console.log(b)
 }
 
 checkboxDiv( crackId, crust );
-checkboxDiv( cheeid, cheesecake);
+checkboxDiv( cheeId, cheesecake);
 
 
 let cookingTime = (TimeDisplay) =>{
-    // console.log(iName[index].t2);
+   
     let c = document.getElementById("timetable");
 
     for (let index = 0; index < TimeDisplay.length; index++) {
         
         let mainDiv = document.createElement("div")
-        // mainDiv.className = "mainDiv";
         mainDiv.className = `mainDiv${index+1}`;
-        // let secondClass = `mainDiv${index+1}`;
-        // mainDiv.classList.add = ("mainDiv");
         setTimeout(() => { mainDiv.classList.add("mainDiv") }, 500);
     
             let image = document.createElement("img");
-            // image.className = `svgImages${index+1}`;
             image.className = "svgImages";
             image.src = `./images/svg/${TimeDisplay[index].iName}`;
         
@@ -165,13 +130,11 @@ let cookingTime = (TimeDisplay) =>{
             
                     let p1 = document.createElement("p");
                     p1.className = "txtHead";
-                    // p1.className = `txtHead${index+1}`;
                     p1.innerHTML = TimeDisplay[index].t1;
                     innerDiv1.appendChild(p1);
                 
                     let p2 = document.createElement("p");
                     p2.className = "txtDesc";
-                    // p2.className = `txtDesc${index+1}`;
                     p2.innerHTML = TimeDisplay[index].t2;
                     if (TimeDisplay[index].t2 === "12 servings") {
                         p2.style.color = "orange";
