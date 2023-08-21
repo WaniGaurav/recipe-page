@@ -109,17 +109,16 @@ p {
 
 input[type="checkbox"] {
     display: flex;
+    flex: 0 0 1.313rem;
     margin-right: 1rem;
     width: 21px;
     height: 21px;
     border-radius: 4px;
     border: 1px;
-
-    border: 1px solid #828282
+    border: 1px solid #828282;
 }
 .ingredientsDiv label{
     padding-bottom: 1rem;
-    flex: 0 0 31rem;
 }
 
 strong{
@@ -353,6 +352,7 @@ color: #000000;
     .container{
         max-width: 375px;
         min-height: 3740px;
+        padding: 1.2rem 0.625rem;
     }
     .recipe{
         width: fit-content;
@@ -393,8 +393,8 @@ color: #000000;
     .url-div{
         display: flex;
         flex-direction: column;
+        width: max-content;
         padding: 2rem 0;
-        border: 2px solid red;
     }
     .source-url{
         white-space: pre-wrap; 
