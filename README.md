@@ -83,4 +83,4 @@ $ npm start
 ## Contact
 
 - Website [your-website.com](https://recipe-page-gw.netlify.app/)
-- GitHub [@your-username](https://github.com/WaniGaurav/)
+- GitHub [WaniGaurav](https://github.com/WaniGaurav/)
